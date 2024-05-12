@@ -9,6 +9,6 @@ type Service struct {
 func NewService(store OrdersStore) *Service {
 	return &Service{store: store}
 }
-func CreateOrder(ctx context.Context) error {
+func (s *Service) CreateOrder(context.Context) error {
 	return nil
 }
