@@ -1,0 +1,10 @@
+go 1.22rc2
+
+use (
+	./common
+	./gateway
+	./kitchen
+	./orders
+	./payments
+	./stock
+)
