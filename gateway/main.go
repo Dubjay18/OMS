@@ -1,12 +1,13 @@
 package main
 
 import (
+	common "github.com/Dubjay18/OMS.git"
 	"log"
 	"net/http"
 )
 
-const (
-	httpPort = ":8080"
+var (
+	httpPort = common.EnvString("HTTP_PORT", ":8080")
 )
 
 func main() {
