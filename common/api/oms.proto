@@ -1,0 +1,27 @@
+syntax="proto3";
+    option go_package = "github.com/Dubjay18/oms-common";
+
+    package api;
+
+    message Order {
+      string ID = 1;
+      string customerID = 2;
+      string status = 3;
+      repeated ItemsWithQuantity items = 4;
+    }
+
+    service OrderService {
+        rpc CreateOrder(CreateOrderRequest) returns (Order);
+    }
+
+    message ItemsWithQuantity {
+      string itemID = 1;
+      string Nanme = 2;
+      int32 quantity = 3;
+      string PriceID = 4;
+    }
+
+    message CreateOrderRequest {
+      string customerID = 1;
+      repeated ItemsWithQuantity items = 2;
+    }

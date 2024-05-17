@@ -1,7 +1,8 @@
 package main
 
 import (
-	common "github.com/Dubjay18/OMS.git"
+	common "github.com/Dubjay18/OMS-common.git"
+	_ "github.com/joho/godotenv/autoload"
 	"log"
 	"net/http"
 )
