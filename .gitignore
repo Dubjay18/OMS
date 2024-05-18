@@ -1,1 +1,5 @@
 gateway/.env
+orders/tmp
+gateway/tmp
+kitchen/tmp
+payments/tmp
