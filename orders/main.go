@@ -21,7 +21,7 @@ func main() {
 	defer l.Close()
 	store := NewStore()
 	svc := NewService(store)
-	NewGrpcHandler(grpcServer)
+	NewGrpcHandler(grpcServer, svc)
 	svc.CreateOrder(context.Background())
 
 	log.Println("Starting server on ", grpcAddr)
